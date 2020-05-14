@@ -1,17 +1,32 @@
 <template>
   <div class="list-item-wrap">
+    <div class="list-item-top-icon">
+      <i v-if="data.icon"
+        :class="data.icon"></i>
+    </div>
     <div class="img-wrap">
       <img :src="data.imgs[0]" alt="" class="normal">
       <img :src="data.imgs[1]" alt="" class="hover">
     </div>
     <div class="list-item-btm">
         <div class="list-item-radio-wrap">
-        <radio-component></radio-component>
-        <i class="list-item-heart-icon"
-            :class="heartActive ? 'v-icon-heart' : 'v-icon-heart1'"
-            @click="heartActive = !heartActive"></i>
+            <radio-component></radio-component>
+            <i class="list-item-heart-icon"
+                :class="heartActive ? 'v-icon-heart' : 'v-icon-heart1'"
+                @click="heartActive = !heartActive"></i>
         </div>
         <div class="list-item-title">
+            <span>{{data.name}}</span>
+            <span>${{data.money}}</span>
+        </div>
+        <div class="list-item-button">More Detail</div>
+    </div>
+    <div class="phone-list-item-btm">
+        <radio-component></radio-component>
+        <div class="list-item-title">
+            <i class="list-item-heart-icon"
+                :class="heartActive ? 'v-icon-heart' : 'v-icon-heart1'"
+                @click="heartActive = !heartActive"></i>
             <span>{{data.name}}</span>
             <span>${{data.money}}</span>
         </div>
@@ -39,48 +54,42 @@ export default {
     }
 }
 </script>
-<style scoped>
-.list-item-wrap {
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  width: 33.3%;
-  height: 260px;
-  min-width: 150px;
+<style scoped lang="scss">
+.phone-list-item-btm {
+    display: none;
+    flex-direction: column;
+    align-items: center;
 }
-.img-wrap {
-  padding: 20px 0;
-}
-.img-wrap > img {
-  width: 100%;
-  height: 80px;
-  object-fit: contain;
-}
-.img-wrap > .hover {
-  display: none;
-}
-.img-wrap:hover > .normal {
-  display: none;
-}
-.img-wrap:hover > .hover {
-  display: inherit;
-}
-.list-item-btm {
-    padding: 0 25px;
-}
-.list-item-radio-wrap {
-  display: flex;
-  justify-content: space-between;
-}
-.list-item-heart-icon {
-  color: red;
-}
-.list-item-title {
+.list-item- {
+  &wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 33.3%;
+    // height: 260px;
+    min-width: 150px;
+  }
+  &top-icon {
+      text-align: right;
+      font-size: 26px;
+      height: 40px;
+  }
+  &btm {
+      padding: 0 25px;
+  }
+  &radio-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &heart-icon {
+    color: red;
+  }
+  &title {
     font-size: 16px;
     font-weight: 500;
     margin: 10px 0 20px;
-}
-.list-item-button {
+  }
+  &button {
     width: 80%;
     display: block;
     margin: 0 auto;
@@ -91,9 +100,41 @@ export default {
     background: #fff;
     border-radius: 8px;
     cursor: pointer;
+    &:active {
+      background: #21baff;
+      color: #fff;
+    }
+  }
 }
-.list-item-button:active {
-    background: #21baff;
-    color: #fff;
+.img-wrap {
+  padding: 10px 0 20px;
+  & > img {
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+  }
+  & > .hover {
+    display: none;
+  }
+  &:hover {
+    & > .normal {
+      display: none;
+    }
+    &> .hover {
+      display: block;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+    .list-item-wrap {
+        width: 100%;
+    }
+    .list-item-btm {
+        display: none;
+    }
+    .phone-list-item-btm {
+        display: flex;
+    }
 }
 </style>
