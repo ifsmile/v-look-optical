@@ -56,6 +56,19 @@ module.exports = {
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          {
+              loader: 'sass-loader',
+              options: {
+                  indentedSyntax: false
+              }
+          }
+        ]
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {

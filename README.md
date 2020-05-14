@@ -1,4 +1,4 @@
-# v-look
+# v-look-optical
 
 > A Vue.js project
 
