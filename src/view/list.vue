@@ -1,49 +1,53 @@
 <template>
-<div class="list-wrap">
-    <div class="phone-list-header">
-        <h2>Glasses frames for women</h2>
-        <p>Our glasses frames for women range, Our glasses frames for women range, Our glasses frames for women range, Our glasses frames for women range</p>
-        <i class="v-icon-arrow-down"></i>
-    </div>
-    <div class="phone-list-filter-wrap">
-        <div class="phone-list-filter-top">
-            <span>Sort by: Popularity <i class="v-icon-arrow-down"></i></span>
-            <span class="phone-list-filter-top-right">Filter(1)<i class="v-icon-filter"></i></span>
+<div>
+    <header-selector></header-selector>
+    <div class="list-wrap">
+        <div class="phone-list-header">
+            <h2>Glasses frames for women</h2>
+            <p>Our glasses frames for women range, Our glasses frames for women range, Our glasses frames for women range, Our glasses frames for women range</p>
+            <i class="v-icon-arrow-down"></i>
         </div>
-        <div class="phone-list-filter-bottom">
-            <span>Frame:612</span>
-            <i class="v-icon-equal"></i>
-            <i class="v-icon-menu"></i>
+        <div class="phone-list-filter-wrap">
+            <div class="phone-list-filter-top">
+                <span>Sort by: Popularity <i class="v-icon-arrow-down"></i></span>
+                <span class="phone-list-filter-top-right">Filter(1)<i class="v-icon-filter"></i></span>
+            </div>
+            <div class="phone-list-filter-bottom">
+                <span>Frame:612</span>
+                <i class="v-icon-equal"></i>
+                <i class="v-icon-menu"></i>
+            </div>
         </div>
-    </div>
-    <div class="list-box">
-        <list-item v-for="item in list" :key="item.id" :data="item"></list-item>
-    </div>
-    <img :src="listBg1" alt=""
-        class="list-bg1">
-    <div class="phone-list-header swiper">
-        <h2>Glasses frames for women</h2>
-        <h4>Your Prescription Is Our Business</h4>
-        <p>Our glasses frames for women range, Our glasses frames for women range, Our glasses frames for women range, Our glasses frames for women range</p>
-        <div class="phone-list-header-swiper-btn-wrap">
-            <span class="phone-list-header-swiper-btn active"></span>
-            <span class="phone-list-header-swiper-btn"></span>
-            <span class="phone-list-header-swiper-btn"></span>
+        <div class="list-box">
+            <list-item v-for="item in list" :key="item.id" :data="item"></list-item>
         </div>
-    </div>
-    <div class="list-box">
-        <list-item v-for="item in list" :key="item.id" :data="item"></list-item>
-    </div>
-    <div class="list-footer-pagination list-footer-pagination-arrow">
-        <i class="v-icon-arrow-left"></i>
-        <span class="list-footer-pagination-no">1</span>
-        <span class="list-footer-pagination-no">2</span>
-        <span class="list-footer-pagination-no">3</span>
-        <i class="v-icon-arrow-right list-footer-pagination-arrow"></i>
+        <img :src="listBg1" alt=""
+            class="list-bg1">
+        <div class="phone-list-header swiper">
+            <h2>Glasses frames for women</h2>
+            <h4>Your Prescription Is Our Business</h4>
+            <p>Our glasses frames for women range, Our glasses frames for women range, Our glasses frames for women range, Our glasses frames for women range</p>
+            <div class="phone-list-header-swiper-btn-wrap">
+                <span class="phone-list-header-swiper-btn active"></span>
+                <span class="phone-list-header-swiper-btn"></span>
+                <span class="phone-list-header-swiper-btn"></span>
+            </div>
+        </div>
+        <div class="list-box">
+            <list-item v-for="item in list" :key="item.id" :data="item"></list-item>
+        </div>
+        <div class="list-footer-pagination list-footer-pagination-arrow">
+            <i class="v-icon-arrow-left"></i>
+            <span class="list-footer-pagination-no">1</span>
+            <span class="list-footer-pagination-no">2</span>
+            <span class="list-footer-pagination-no">3</span>
+            <i class="v-icon-arrow-right list-footer-pagination-arrow"></i>
+        </div>
     </div>
 </div>
 </template>
 <script>
+import HeaderSelector from 'components/header-selector'
 import ListItem from 'components/list-item'
 
 export default {
@@ -84,7 +88,7 @@ export default {
             }]
         }
     },
-    components: { ListItem }
+    components: { ListItem, HeaderSelector }
 }
 </script>
 <style scoped lang="scss">
