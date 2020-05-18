@@ -66,7 +66,7 @@ export default {
 }
 @media screen and (max-width: 768px) {
     .header-selector-wrap {
-        padding: 0;
+        display: none;
     }
 }
 </style>
