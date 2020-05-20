@@ -55,6 +55,7 @@ export default {
         return {
             listBg1: require('assets/list-bg1.jpg'),
             list: [{
+                id: '11',
                 name: 'Fine1',
                 money: 100,
                 imgs: [
@@ -63,6 +64,7 @@ export default {
                 ],
                 icon: 'v-icon-flower'
             }, {
+                id: '22',
                 name: 'Fine2',
                 money: 200,
                 imgs: [
@@ -71,6 +73,7 @@ export default {
                 ],
                 icon: 'v-icon-Star'
             }, {
+                id: '33',
                 name: 'Fine3',
                 money: 300,
                 imgs: [
@@ -78,6 +81,7 @@ export default {
                     'https://d11mqqjj4dkdrj.cloudfront.net/media/frame/7d9ea8c4b7d249c1baf645da215aa382.jpg'
                 ]
             }, {
+                id: '44',
                 name: 'Fine3',
                 money: 300,
                 imgs: [

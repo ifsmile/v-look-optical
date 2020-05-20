@@ -19,7 +19,7 @@
             <span>{{data.name}}</span>
             <span>${{data.money}}</span>
         </div>
-        <div class="list-item-button">More Detail</div>
+        <div class="list-item-button" @click="toDetail">More Detail</div>
     </div>
     <div class="phone-list-item-btm">
         <radio-component></radio-component>
@@ -30,7 +30,7 @@
             <span>{{data.name}}</span>
             <span>${{data.money}}</span>
         </div>
-        <div class="list-item-button">More Detail</div>
+        <div class="list-item-button" @click="toDetail">More Detail</div>
     </div>
   </div>
 </template>
@@ -50,6 +50,16 @@ export default {
     data() {
         return {
             heartActive: false
+        }
+    },
+    methods: {
+        toDetail() {
+            this.$router.push({
+                name: 'detail',
+                params: {
+                    id: this.data.id
+                }
+            })
         }
     }
 }

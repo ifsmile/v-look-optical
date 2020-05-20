@@ -14,3 +14,76 @@ body {
 body {
     font-family: -apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;;
 }
+p, ul, li, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+.flex {
+display: flex;
+}
+.flex-1 {
+    flex: 1;
+    overflow: hidden;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+.flex-middle {
+    display: flex;
+    align-items: center;
+}
+.flex-center-middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-between-middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-around-middle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex-y {
+    display: flex;
+    flex-direction: column;
+}
+.flex-y-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-y-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.flex-y-center-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.flex-y-center-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex-y-center-around {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.flex-1 {
+    flex: 1;
+}
+.global-link {
+    color: #68aaff;
+    cursor: pointer;
+}
