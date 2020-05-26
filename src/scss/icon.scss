@@ -1,6 +1,6 @@
 @font-face {font-family: "iconfont";
-    src: url('//at.alicdn.com/t/font_1814713_ja87jdckmp.woff?t=1589277623368') format('woff'),
-    url('//at.alicdn.com/t/font_1814713_ja87jdckmp.ttf?t=1589277623368') format('truetype')
+    src: url('//at.alicdn.com/t/font_1814713_ctfiuacdvie.woff?t=1589277623368') format('woff'),
+    url('//at.alicdn.com/t/font_1814713_ctfiuacdvie.ttf?t=1589277623368') format('truetype')
   }
   
   .iconfont {
@@ -15,6 +15,17 @@
     font-style:normal;
   }
   
+  .v-icon-close:before {
+    content: "\e607";
+  }
+  
+  .v-icon-eye:before {
+    content: "\e7f6";
+  }
+  
+  .v-icon-eye-close:before {
+    content: "\e6c3";
+  }
   
   .v-icon-setting:before {
     content: "\e606";

@@ -15,7 +15,8 @@
                 <div class="flex-between-middle detail-banner-btm">
                     <div></div>
                     <radio-component class="detail-radio-component"></radio-component>
-                    <button class="detail-vr-btn flex-center-middle"><i class="v-icon-vr detail-vr-btn-icon"></i>VR VIEWING</button>
+                    <button class="detail-vr-btn flex-center-middle"
+                        @click="visible360 = true"><i class="v-icon-vr detail-vr-btn-icon"></i>VR VIEWING</button>
                 </div>
             </div>
             <div class="detail-right-box">
@@ -47,7 +48,8 @@
                     <div class="flex-between-middle detail-reverse-box">
                         <button class="detail-try-on-btn detail-buy-btn flex-1">ADD LENSES</button>
                         <div class="detail-vr-btn-wrap">
-                            <button class="detail-vr-btn mobile-end flex-center-middle">360°</button>
+                            <button class="detail-vr-btn mobile-end flex-center-middle"
+                                @click="visible360 = true">360°</button>
                             <i class="v-icon-heart1 detail-star-btn"></i>
                         </div>
                     </div>
@@ -142,17 +144,21 @@
                 </div>
             </div>
         </div>
+        <view360 :visible.sync="visible360"></view360>
     </div>
 </template>
 <script>
 import RadioComponent from 'components/radio-component'
+import View360 from 'components/view360'
+
 export default {
-    components: { RadioComponent },
+    components: { RadioComponent, View360 },
     data() {
         return {
             img1: require('assets/detail-img-1.jpg'),
             img2: require('assets/detail-img-2.jpg'),
-            imgSize: require('assets/detail-size.jpg')
+            imgSize: require('assets/detail-size.jpg'),
+            visible360: false
         }
     }
 }
